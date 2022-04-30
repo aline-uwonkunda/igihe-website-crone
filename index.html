@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IGIHE</title>
+</head>
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.1-web/css/all.css">
+<style type="text/css">
+	body{
+		margin: 0 auto;
+		background-color: black;
+		background: url('IMG/gh_day_content3.JPG');
+		font-family: 'helvetica',sans-serif;
+		user-select: none;
+		text-transform: capitalize;
+	}
+	.header{
+		position: relative;
+		margin-top: 2px;
+		border: 1px solid #c7c2c2;
+		left: 2%;
+		width: 96%;
+		background-color: #3a3a3a;
+		top: 0;
+	}
+	.header .links .holder:hover{
+		color: #fed200;
+		border-top: 2px solid #d2e01a;
+		cursor: pointer;
+	}
+	.links td{
+		padding:02px 5px 02px 5px;
+	}
+	table{
+		display: inline-block;
+		/*justify-content: space-between;*/
+	}
+	.t-2{
+		float: right;
+		margin-right: 20px;
+	}
+	.t-2 i{
+		color: #ffffff;
+	}
+	.links .holder{
+		    font-weight: 700;
+		    transition: .3s;
+		color: #b5b0b0;
+		padding: 5px 10px 0 15px;
+		font-size: 11px;
+		
+	}
+	.n-content{
+		background-color: transparent;
+		width: 80%;
+		float: right;
+		margin-right: 1.9%;
+		text-transform: capitalize;
+		font-size: 12px;
+	}
+	.n-content td{
+		padding:  0 4px 0 4px;
+		color: #ffffff;
+	}
+	.big-td{
+		width: 80%;
+		text-align: center;
+	}
+	.weather{
+		width: 2%;
+	}
+	.bg-1{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: -100;
+		top: 0;
+	}
+	.t-hol1{
+		max-width: 40px;
+		min-width: 40px;
+	}
+	.icons{
+		position: absolute;
+		margin-top: 2px;
+		margin-left: -18px;
+		display: inline-block;
+	}
+	.li-hol{
+		text-align: right;
+	}
+	.hom-link{
+		color: #fed200;
+		padding: 0 12px 0 8px;
+		font-size: 11px;
+
+	}
+	.full-cont{
+		background-color: transparent;
+		position: relative;
+		margin-left: 2%;
+		height: 100%;
+		width: 96%;
+	}
+	.fa-clock{
+		color: #b5b0b0;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin: 8px 2px 0 5px;
+		font-size: 11px;
+	}
+	#holder:hover{
+		color: #b5b0b0;
+	}
+	.igh-logo,.kwbk-logo{
+		position: relative;
+		display: inline-block;
+		margin-left: 5px;
+	}
+	.kwbk-logo{
+		float: right;
+		width: 600px;
+		margin-right: 10px;
+	}
+	.kwbk-logo img{
+		width: 90%;
+		height: 85px;
+	}
+	.ads-hol1{
+		width: 950px;
+		position: relative;
+		margin-top: 20px;
+	}
+	.nav-but1{
+		background-image: linear-gradient(to bottom,#1f78b9,#023a84);
+		color: #fff;
+		border: none;
+		font-size: 12px;
+		padding: 1px 33.6px 1px 34px;
+		margin: 0 .5px 0 .5px;
+		line-height: 23px;
+	}
+	.nav-but1 i{
+		padding:  0 3px 0 3px;
+		display: inline-block;
+	}
+	.na-but-holder{
+		background-color: #3092c0;
+		display: inline-flex;
+		width: 967px;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.na-but-holder li{
+		text-align: center;
+	}
+	.buttons{
+		min-width: 100%;
+		position: relative;
+	    min-height: 1px;
+	    box-sizing: border-box;
+	}
+	.na-but-holder li a{
+		text-decoration: none;
+		color: #ffffff;
+		display: inline-block;
+	}
+	.last{
+		padding-right:26px;
+		background-image: linear-gradient(to bottom,#fbd47c,#fac039);
+    
+	}
+	.last1{
+		padding-right: 21px;
+	}
+	.mlast{
+	color: #000;	
+	}
+	.nav-but1:hover a{
+		background-color: #ffffff;
+		color: #1f78b9;
+	}
+	.nav-but1:hover{
+		background-image: linear-gradient(to bottom,#ffffff,#ffffff);
+		color: #1f78b9;
+		cursor: pointer;
+	}
+	.gv-01{
+		margin-top: 10px;
+		background-color: transparent;
+		width: 969px;
+		padding: 0;
+	}
+	.gv-01 img{
+		position: relative;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		width: 49.7%;
+	}
+	.st-title{
+		width: 969px;
+		background-color: #ffffff;
+		border: 1px solid #2096cd;
+		height: 20px;
+		overflow: hidden;
+	}
+	.st-title .p-title{
+		padding: 6px 1px 2px 6px;
+		font-weight: bold;
+		margin-top: -11px;
+		font-size: 12px;
+		color: #ffffff;
+		background-color: #2096cd;
+		width: 80px;
+		height: 100%;
+
+	}
+	.st-title .p-title:after{
+		content: '';
+		background-color: #2096cd;
+		width: 12px;
+		height: 12px;
+		margin-left: 10px;
+		margin-top: 1px;
+		position: absolute;
+		transform: rotate(48deg);
+	}
+	.st-title .p-cont,.p-title{
+		display: inline-block;
+}
+	.p-cont{
+		color: #000;
+		position: relative;
+		margin: 0;
+		font-size: 11px;
+		padding-left: 30px;
+		width: 50%;
+	}
+	.news-content{
+		width: 970px;
+		overflow: hidden;
+		height: 270px;
+		box-shadow: 0 0 16px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.24);
+		margin-top: 10px;
+		background-color: #ffffff;
+	}
+	.empty-div{
+		width: 42%;
+		height: 98%; 
+		background: url('IMG/9b247fcb325fb95254a7690e55e32d.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-blend-mode: saturation;
+	}
+	.video-div{
+		width: 32%;
+		height: 98%; 
+		background-color: #000000;
+	}
+	.form-div{
+		width: 23%;
+		overflow: hidden;
+		height: 98%; 
+	}
+	.video-div .vid-title{
+		padding: 0;
+		margin: 0;
+		width: 28%;
+		height: 60px;
+		background-color: transparent;
+		position: absolute;
+	}
+	.empty-div,
+	.video-div,
+	.form-div{
+	display: inline-block;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.12), 0 12px 12px rgba(0, 0, 0, 0.24);
+	margin: 2px 2px 0 2px;
+	border: 1px solid #000;
+}
+.empty-div img{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+.vi-cont{
+	color: #ffffff;
+	width: 420px;
+	font-size: 17px;
+	font-family: verdana;
+	margin-top: -20px;
+	text-transform: capitalize;
+}
+.exit-but{
+  color: #f2f2f2f2;
+  position: relative;
+}
+
+.more-but{
+	background-color: transparent;
+	padding: 10px 0 0 0;
+	position: absolute;
+	float: right;
+	margin-right: -30px;
+	right: 0;
+	top: 0;
+}
+.youtube-logo{
+	width: 40px;
+	height: 40px;
+	margin-top: 08%;
+	margin-left: 13%;
+	position: absolute;
+}
+.youtube-logo svg{
+	width: 100%;
+	height: 100%;
+}
+.form-div img{
+	margin-top: 6px;
+	position: relative;
+	height: 200px;
+	width: 100%;
+}
+.f-search{
+	position: relative;
+	width: 94%;
+	margin-left: 3px;
+	margin-right: 5px;
+	border: 1px solid #000000;
+	margin-top: 2px;
+	padding-left: 4px;
+	height: 50px;
+}
+</style>
+
+<body>
+	
+	<div class="header">
+		<table class="links">
+			<tr>
+
+				<td class="t-hol1"><i class="fas fa-clock"></i><font id="holder" class="holder"></font></td>
+				<td class="li-hol"><font class="hom-link">IGIHE&nbsp;NETWORK</font></td>
+				<td class="li-hol"><font class="holder"><img src="IMG/rkinyarwanda.ico" class="icons">KINYARWANDA</font></td>
+				<td class="li-hol"><font class="holder"><img src="IMG/britain.ico" class="icons">ENGLISH</font></td>
+				<td class="li-hol"><font class="holder"><img src="IMG/francais.ico" class="icons">FRANCAIS</font></td>
+				<td class="li-hol"><font class="holder">IGIHE&nbsp;TV</font></td>
+			</tr>
+		</table>
+		<table class="t-2">
+			<tr>
+				<td style="padding-right: 10px;"><i class="fas fa-facebook" style="font-size: 12px;"></i></td>
+				<td style="padding-right: 10px;"><i class="fas fa-twitter" style="font-size: 12px;"></i></td>
+				<td style="border-right: 1px solid  #c7c2c2; padding-right: 5px; font-size: 12px;"><i class="fas fa-instagram"></i></td>
+				<td style="width: 50px; text-align: center;"><i class="fa fa-search" style="color: #3582d2;padding-top: 4px;"></i></td>
+			</tr>
+		</table>
+	</div>
+	<div class="pre-header">
+		<table class="n-content">
+			<tr>
+				<td class="big-td">kwamamaza</td>
+				<td class="weather">+22<sup style="font-size: 7px; padding-left: 1px;">o</sup>&nbsp;C</td>
+				<td class="weather"></td>
+				<td class="weather">|&nbsp;kigali</td>
+			</tr>
+		</table>
+	</div>
+	<div class="full-cont">
+	<div class="ads-hol1">
+		<div class="igh-logo"><img src="IMG/arton31647.png"> </div>
+		<div class="kwbk-logo"><img src="IMG/muhabura-798-x-90-1.gif"></div>
+	</div>
+	<div class="buttons">
+		<ul class="na-but-holder">
+		<li class="nav-but1"><a href="#"><i class="fa fa-home fa-lg"></i>ahabanza</a></li>
+		<li class="nav-but1"><a href="#"><i class="fas fa-institution"></i>politiki</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-heartbeat "></i>ubuzima</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-trophy"></i>imikino</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-bullseye"></i>imyidagaduro</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-laptop"></i>ikoranabuhanga</a></li>
+		<li class="nav-but1 last1"><a href="#"><i class="fa fa-language"></i>umuco</a></li>
+	</ul>
+	<ul class="na-but-holder">
+		<li class="nav-but1"><a href="#"><i class="fa fa-plane"></i>ubukerarugendo</a></li>
+		<li class="nav-but1"><a href="#"><i class="fas fa-line-chart "></i>ubukungu</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-group"></i>abantu</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-female"></i>fashion</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-plus-circle"></i>iyobokamana</a></li>
+		<li class="nav-but1"><a href="#"><i class="fa fa-newspaper"></i>amakuru</a></li>
+		<li class="nav-but1 last"><a href="#" class="mlast" style="color: black;"><i class="fa fa-share-alt"></i>ibikurikira</a></li>
+	</ul>
+	</div>
+	<div class="gv-01">
+		<img src="IMG/nurc_banner_638x90px_kiny_revnw.gif">
+		<img src="IMG/igihe-_kwibuka27-bsc-638x90px.jpg">
+	</div>
+	<div class="st-title">
+		<p class="p-title">izigezweho</p>
+		<p class="p-cont"><span style="color: red;">U Rwanda</span> - Perezida Kagame yakiriye umuhungu wa Idris Déby Itno wayoboraga Tchad</p>
+	</div>
+	<div class="news-content">
+		<div class="empty-div">
+			<img src="IMG/9b247fcb325fb95254a7690e55e32d.jpg">
+		</div>
+		<div class="video-div">
+			<div class="vid-title">
+				<div class="exit-but">
+					<i class="fas fa-plus-circle" style="transform: rotate(40deg);"></i>
+				</div>
+				<div class="vi-cont"><p style="padding-left: 40px; padding-top: -10px;">abarenganwa na rusesa...</p></div>
+				<div class="more-but"><svg style="width: 30px;" viewBox="-5 -5 36 36" width="100%"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#fff"></path></svg>
+				</div>
+
+			</div>
+			<center>
+				<div class="youtube-logo"><svg  version="1.1" viewBox="0 0 68 48" ><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#ffffff"></path></svg></div>
+			</center>
+			
+		</div>
+		<div class="form-div">
+			<form>
+				<input type="text" name="" class="f-search" placeholder="Shakisha...">
+			</form>
+			<img src="IMG/mtn_previous.gif">
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	showSec();
+	setInterval(showSec,1000);
+
+	function showSec() {
+		var timeCont = document.getElementById('holder');
+		var time = new Date(); 
+	var hours = time.getHours();
+		var seconds = time.getSeconds();
+		var minutes = time.getMinutes();
+		timeCont.innerText = hours+':'+minutes+':'+seconds;
+
+	}
+
+</script>
+</body>
+
+</html>
